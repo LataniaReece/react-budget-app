@@ -1,0 +1,15 @@
+$primary-color: #1b8381;
+$dark-primary-color: #125957;
+
+$secondary-color: #342b50;
+
+$primary-background-color: #eefffd;
+
+$light-color: #fdfcff;
+
+$text-color: #333;
+
+@import './styles/general';
+@import './styles/header';
+@import './styles/showcase';
+@import './styles/features';

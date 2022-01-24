@@ -1,0 +1,39 @@
+.showcase {
+  background-color: $primary-background-color;
+  padding: 5rem;
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    .content {
+      flex: 50%;
+      h2 {
+        width: 80%;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: $text-color;
+        span {
+          color: $dark-primary-color;
+        }
+      }
+      p {
+        width: 90%;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .img {
+      flex: 50%;
+
+      object {
+        max-width: 100%;
+      }
+    }
+    .cta-btn {
+      padding: 0.65rem 0.95rem;
+      background-color: $primary-color;
+      width: 30%;
+      color: white;
+      border-radius: 8px;
+      text-align: center;
+    }
+  }
+}
