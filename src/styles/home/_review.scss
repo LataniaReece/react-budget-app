@@ -1,0 +1,40 @@
+.review {
+  background-color: $secondary-color;
+  text-align: center;
+  color: white;
+  padding: 4.5rem 10rem;
+
+  h4 {
+    font-size: 1.35rem;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 1rem auto;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 150px;
+      bottom: 0;
+      background-color: rgb(255, 255, 255);
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .review {
+    padding: 2rem;
+    p {
+      font-size: 1.3rem;
+    }
+  }
+}

@@ -1,11 +1,10 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import HomeScreen from './screens/HomeScreen';
+import TrackerScreen from './screens/TrackerScreen';
+
+import { GlobalProvider } from './context/GlobalState';
 import './App.scss';
 
 const App = () => {
@@ -19,9 +18,12 @@ const App = () => {
             minWidth: '350px',
           }}
         >
-          <Routes>
-            <Route path='/' element={<HomeScreen />} />
-          </Routes>
+          <GlobalProvider>
+            <Routes>
+              <Route path='/' element={<HomeScreen />} />
+              <Route path='/tracker' element={<TrackerScreen />} />
+            </Routes>
+          </GlobalProvider>
         </main>
       </Router>
     </div>

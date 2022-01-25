@@ -1,0 +1,83 @@
+.showcase {
+  background-color: $primary-background-color;
+  padding: 5rem;
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    .content {
+      flex: 35%;
+      h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: $text-color;
+        span {
+          color: $darker-primary-color;
+        }
+      }
+      p {
+        width: 90%;
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-btn {
+        padding: 0.65rem 0.95rem;
+        background-color: $primary-color;
+        width: 30%;
+        color: white;
+        border-radius: 8px;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $dark-primary-color;
+        }
+      }
+    }
+    .img {
+      flex: 53%;
+
+      object {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .showcase {
+    margin-top: $navbar-scrolling-height;
+    padding: 2rem 0.5rem 4rem 0.5rem;
+
+    .flex {
+      flex-direction: column;
+
+      .content {
+        text-align: center;
+        p {
+          width: 100%;
+        }
+
+        .cta-btn {
+          width: 100%;
+          display: block;
+        }
+      }
+
+      .img {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .showcase {
+    .flex {
+      .img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.bottom-cta {
+  padding: 4rem 6rem;
+  text-align: center;
+
+  i {
+    color: $dark-primary-color;
+    background-color: $light-primary-color;
+    padding: 1.5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1.5px;
+      width: 85px;
+      top: 0;
+      background-color: white;
+      text-align: center;
+      border: 2px solid black;
+    }
+  }
+  p {
+    width: 60%;
+    margin: 0 auto 1.5rem auto;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .btn {
+    padding: 0.65rem 0.95rem;
+    background-color: $primary-color;
+    width: 15%;
+    margin: 0 auto;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $dark-primary-color;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .bottom-cta {
+    padding: 3rem 2rem 5rem 2rem;
+    p {
+      width: 100%;
+    }
+    .btn {
+      margin-top: 1.9rem;
+      display: block;
+      width: 100%;
+    }
+  }
+}

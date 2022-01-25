@@ -1,7 +1,10 @@
 import React from 'react';
-import FeaturesComponent from '../components/features/FeaturesComponent';
-import HeaderComponent from '../components/HeaderComponent';
-import ShowcaseComponent from '../components/ShowcaseComponent';
+import HeaderComponent from '../components/home/HeaderComponent';
+import BottomCtaComponent from '../components/home/BottomCtaComponent';
+import FeaturesComponent from '../components/home/features/FeaturesComponent';
+import FooterComponent from '../components/home/FooterComponent';
+import ReviewComponent from '../components/home/ReviewComponent';
+import ShowcaseComponent from '../components/home/ShowcaseComponent';
 
 const HomeScreen = () => {
   return (
@@ -9,6 +12,9 @@ const HomeScreen = () => {
       <HeaderComponent />
       <ShowcaseComponent />
       <FeaturesComponent />
+      <ReviewComponent />
+      <BottomCtaComponent />
+      <FooterComponent />
     </div>
   );
 };

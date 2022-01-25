@@ -1,0 +1,163 @@
+.tracker {
+  padding: 3rem 5rem;
+  background-color: rgb(238, 238, 238);
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-color;
+    color: white;
+    padding: 2rem;
+    font-weight: 300;
+    min-height: 90vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+
+    .home-btn {
+      align-self: flex-start;
+      padding: 0.55rem 0.95rem;
+      background-color: white;
+      color: #333;
+      border-radius: 15px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        background-color: $primary-color;
+        color: white;
+      }
+    }
+    .balance {
+      text-align: center;
+      margin-bottom: 1rem;
+
+      .header {
+        font-weight: 300;
+        font-size: 2.7rem;
+        text-transform: uppercase;
+        color: $primary-color;
+      }
+
+      .subheader {
+        margin-top: 1rem;
+        font-size: 2rem;
+        font-weight: 300;
+      }
+
+      .balance-amount {
+        font-size: 2rem;
+        margin-bottom: 1.3rem;
+      }
+    }
+    .flex-col {
+      display: flex;
+      gap: 2rem;
+      width: 100%;
+
+      div {
+        width: 70%;
+        margin: 0 auto;
+        .finance-header {
+          font-size: 1.4rem;
+          font-weight: 300;
+          text-align: center;
+        }
+        .finance-amount {
+          font-size: 1.15rem;
+          margin-bottom: 2rem;
+          text-align: center;
+        }
+      }
+      .income-widget {
+        .finance-header,
+        .finance-amount {
+          color: rgb(88, 204, 88);
+        }
+      }
+      .expense-widget {
+        .finance-header,
+        .finance-amount {
+          color: rgb(190, 104, 104);
+        }
+      }
+
+      .finance-list {
+        h4 {
+          font-weight: 300;
+          margin-bottom: 1rem;
+          text-align: center;
+        }
+        .transactions {
+          list-style: none;
+          .transaction-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            p {
+              padding: 0.65rem 1rem;
+              border-radius: 8px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+              margin-right: 0.5rem;
+            }
+            .expense-item {
+              background-color: rgb(190, 104, 104);
+            }
+            .income-item {
+              background-color: rgb(88, 204, 88);
+            }
+            i {
+              cursor: pointer;
+              transition: all 0.2s ease-in;
+
+              &:hover {
+                color: rgb(146, 145, 145);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .tracker {
+    padding: 1rem;
+
+    .wrapper {
+      .balance {
+        margin: 2rem 0;
+
+        .header {
+          font-size: 2.4rem;
+        }
+
+        .balance-amount {
+          font-size: 1.85rem;
+        }
+      }
+      .flex-col {
+        flex-direction: column;
+        div {
+          width: 100%;
+        }
+        .finance-list {
+          .transactions {
+            .transaction-item {
+              p {
+                padding: 0.45rem 0.84rem;
+                margin-right: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
